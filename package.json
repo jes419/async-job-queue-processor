@@ -1,0 +1,22 @@
+﻿{
+  "name": "async-job-queue-processor",
+  "version": "1.0.0",
+  "description": "High-concurrency asynchronous job queue worker with automated retries, Redis backing, and Docker orchestration.",
+  "main": "dist/producer.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/producer.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/producer.ts"
+  },
+  "dependencies": {
+    "bullmq": "^5.0.0",
+    "express": "^4.19.0",
+    "ioredis": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
